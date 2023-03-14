@@ -1,0 +1,21 @@
+@import url(./variables.css);
+
+.productSkeleton,
+.product-carts {
+  display: flex;
+  align-items: start;
+  /* column-gap: 20px; */
+  justify-content: space-between;
+}
+
+.mb {
+  margin: 5px 0;
+}
+
+.product-carts {
+  width: 100%;
+  /* background: #2a2a2a; */
+  background: var(--dark);
+  border-radius: 6px;
+  padding: 25px;
+}
