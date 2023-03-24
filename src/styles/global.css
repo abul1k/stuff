@@ -15,6 +15,7 @@
   color: #fff;
   font-weight: 500;
   padding-bottom: 20px;
+  min-height: 100vh;
 }
 
 .light-mode {
