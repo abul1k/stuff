@@ -42,8 +42,9 @@
 
 .light-mode .header-form,
 .light-mode .container section,
-.light-mode .footer,
 .light-mode .product-carts,
+.light-mode .footer,
 .light-mode .user-group input {
   background: var(--grey) !important;
+  /*  */
 }
