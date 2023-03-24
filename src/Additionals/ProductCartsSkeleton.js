@@ -1,9 +1,12 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
+import { useSelector } from "react-redux";
 
 import "../styles/Skeleton.css";
 
 const ProductCartsSkeleton = (props) => {
+  const { theme } = useSelector(({ layout }) => layout);
+
   const rows = 1;
   const columns = 5;
   const coverHeight = 542;
@@ -22,8 +25,8 @@ const ProductCartsSkeleton = (props) => {
         speed={speed}
         width={columns * coverWidthWithPadding}
         height={rows * coverHeightWithPadding}
-        backgroundColor="#202020"
-        foregroundColor="#262626"
+        backgroundColor={theme === "light" ? "#959393" : "#202020"}
+        foregroundColor={theme === "light" ? "#cccccc" : "#262626"}
         {...props}
       >
         {covers.map((g, i) => {

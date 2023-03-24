@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import AppRoutes from "../Routes/Routes";
 import Header from "../Header/Header";
@@ -19,15 +19,19 @@ const App = () => {
     dispatch(getProducts());
   }, [dispatch]);
 
+  const { theme } = useSelector(({ layout }) => layout);
+
   return (
-    <div className="app">
-      <Header />
-      <UserForm />
-      <div className="container">
-        <Sidebar />
-        <AppRoutes />
+    <div className={theme === "light" ? "light-mode" : "dark-mode"}>
+      <div className="app">
+        <Header />
+        <UserForm />
+        <div className="container">
+          <Sidebar />
+          <AppRoutes />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };

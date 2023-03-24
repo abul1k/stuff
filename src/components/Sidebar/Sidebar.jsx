@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   return (
     <section className={styles.sidebar}>
-      <div className={styles.title}>CATEGORIES</div>
+      <h2 className={styles.title}>CATEGORIES</h2>
       <nav>
         <ul className={styles.menu}>
           {list.map(({ id, name }) => (

@@ -2,11 +2,58 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 25px 20px;
+  padding: 25px 0;
 }
 
 .logo {
-  width: 304px;
+  width: 305px;
+}
+
+.logotype {
+  width: 28px;
+}
+
+.langchoise {
+  user-select: none;
+  outline: none;
+  border: 0;
+  background: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.langchoise option {
+  border: 0;
+  background: 0;
+}
+
+.name {
+  font-size: 24px;
+  color: var(--white);
+}
+
+.actions {
+  width: 80px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.theme {
+  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.signInBtn {
+  background: var(--warning);
+  color: var(--dark);
+}
+
+.signInBtn:hover {
+  background: #FFC600;
 }
 
 .info {
@@ -17,10 +64,48 @@
 }
 
 .user {
+  position: relative;
   display: flex;
   align-items: center;
   column-gap: 10px;
   cursor: pointer;
+}
+
+/* Tooltip text */
+.username {
+  visibility: hidden;
+  background-color: #353535;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.username::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 50%;
+  transform: translateX(50%) rotate(180deg);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #353535 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.user:hover .username {
+  visibility: visible;
+  opacity: 1;
 }
 
 .avatar {
@@ -31,12 +116,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.username {
-  font-size: 10px;
-  line-height: 12px;
-  color: var(--grey);
 }
 
 .form {

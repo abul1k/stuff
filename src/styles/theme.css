@@ -1,0 +1,45 @@
+.light-mode .Home_title__9WXHu {
+  color: var(--bg-light-mode);
+}
+
+.light-mode .Products_product__iocfR,
+.light-mode .Cart_item__HQaOH,
+.light-mode .User_wrapper__Vjcje {
+  background: var(--bg-light-mode);
+}
+
+.light-mode .Header_name__RboGb,
+.light-mode .Header_actions__62zwE,
+.light-mode .Home_head__vSnsm,
+.light-mode h2,
+.light-mode h3,
+.light-mode .User_title__dksrQ,
+.light-mode .Cart_total__2QSSz,
+.light-mode .Cart_price__V0XMJ,
+.light-mode .User_link__AD3ua:hover,
+.light-mode .Header_form__FlOPI input::placeholder,
+.light-mode .Header_form__FlOPI input,
+.light-mode .User_group__kK0zJ input,
+.light-mode .User_group__kK0zJ input::placeholder {
+  color: var(--dark);
+}
+
+.light-mode .Header_icon-fav__xfuaF,
+.light-mode .Header_icon-cart__L4jum,
+.light-mode .Cart_close__qwcXm .icon {
+  stroke: var(--dark-sea);
+}
+
+.light-mode .Header_icon-fav__xfuaF:hover,
+.light-mode .User_close__BYyn5 .icon:hover,
+.light-mode .Header_icon-cart__L4jum:hover {
+  stroke: var(--dark);
+}
+
+.light-mode .Header_form__FlOPI,
+.light-mode .container section,
+.light-mode .Footer_footer__6qIm6,
+.light-mode .product-carts,
+.light-mode .User_group__kK0zJ input {
+  background: var(--grey) !important;
+}

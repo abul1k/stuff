@@ -11,7 +11,7 @@
 }
 
 .product {
-  background: var(--bg);
+  background: var(--bg-dark-mode);
   border-radius: 8px;
   overflow: hidden;
   width: calc(100% / 5 - 20px);

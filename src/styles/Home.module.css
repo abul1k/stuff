@@ -8,7 +8,7 @@
   font-size: 119px;
   line-height: 145px;
   text-transform: uppercase;
-  color: var(--bg);
+  color: var(--bg-dark-mode);
   text-align: center;
 }
 
@@ -116,7 +116,7 @@
   font-size: 20px;
   line-height: 24px;
   text-align: center;
-  color: var(--bg);
+  color: var(--bg-dark-mode);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

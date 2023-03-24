@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../features/user/userSlice";
 
-import { toast } from "react-toastify";
-
 import styles from "../../styles/User.module.css";
 
 const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
@@ -38,7 +36,6 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
     if (confirmed) {
       dispatch(loginUser(values));
       closeForm();
-      toast.success("You have successfully registered");
     }
   };
 

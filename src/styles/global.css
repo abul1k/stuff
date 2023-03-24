@@ -1,5 +1,11 @@
-body {
-  background: var(--bg);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.light-mode,
+.dark-mode {
   font-size: 16px;
   line-height: 16px;
   font-family: Montserrat, Roboto, sans-serif;
@@ -9,6 +15,14 @@ body {
   color: #fff;
   font-weight: 500;
   padding-bottom: 20px;
+}
+
+.light-mode {
+  background: var(--bg-light-mode);
+}
+
+.dark-mode {
+  background: var(--bg-dark-mode);
 }
 
 h1,
@@ -67,6 +81,10 @@ li {
 .flex-center {
   align-items: center;
   justify-content: center;
+}
+
+.flex-align {
+  align-items: center;
 }
 
 .icon {

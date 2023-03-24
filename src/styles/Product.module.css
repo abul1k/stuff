@@ -85,7 +85,7 @@
 .size {
   padding: 4px 8px;
   border-radius: 8px;
-  background: var(--bg);
+  background: var(--bg-dark-mode);
   cursor: pointer;
 }
 
@@ -128,5 +128,5 @@
 
 .add:disabled {
   cursor: not-allowed;
-  background: var(--bg);
+  background: var(--bg-dark-mode);
 }

@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../../firebase/firebase";
+import { toast } from "react-toastify";
 
 export const createUser = createAsyncThunk(
   "users/createUser",
@@ -16,9 +17,12 @@ export const createUser = createAsyncThunk(
         payload.email,
         payload.password
       );
+      toast.success("You have successfully registered");
+
       localStorage.setItem("user", JSON.stringify(UserImpl.user));
       return UserImpl.user;
     } catch (error) {
+      toast.error(error.code);
       return thunkAPI.rejectWithValue(error);
     }
   }
@@ -33,9 +37,12 @@ export const loginUser = createAsyncThunk(
         payload.email,
         payload.password
       );
+      toast.success("You have successfully registered");
+
       localStorage.setItem("user", JSON.stringify(UserImpl.user));
       return UserImpl.user;
     } catch (error) {
+      toast.error(error.code);
       return thunkAPI.rejectWithValue(error);
     }
   }
