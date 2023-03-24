@@ -1,64 +1,49 @@
-.light-mode .Home_title__9WXHu,
-.light-mode .Home_title__ANWNn {
+.light-mode .poster-title {
   color: var(--bg-light-mode);
 }
 
-.light-mode .Products_product__iocfR,
-.light-mode .Products_product__TjzZV,
-.light-mode .Cart_item__HQaOH,
-.light-mode .User_wrapper__Vjcje,
-.light-mode .User_wrapper__lx6zT,
-.light-mode .Category_filter__WmGtE,
-.light-mode .Category_filter__bjR4K {
+.light-mode .product-cart-product,
+.light-mode .category-filter,
+.light-mode .item,
+.light-mode .user-wrapper {
   background: var(--bg-light-mode);
 }
 
-.light-mode .Header_name__RboGb,
-.light-mode .Home_head__l2Exm,
-.light-mode .Header_name__D7WeF,
-.light-mode .Header_actions__62zwE,
-.light-mode .Home_head__vSnsm,
+
+.light-mode .header-langchoise,
+.light-mode .header-name,
+.light-mode .header-actions,
+.light-mode .poster-head,
 .light-mode h2,
 .light-mode h3,
-.light-mode .User_title__dksrQ,
-.light-mode .User_title__gm8FI,
-.light-mode .Cart_total__2QSSz,
-.light-mode .Cart_price__V0XMJ,
-.light-mode .Category_filter__WmGtE input,
-.light-mode .Category_filter__bjR4K input,
-.light-mode .User_link__AD3ua:hover,
-.light-mode .User_link__FrsBm:hover,
-.light-mode .Header_form__FlOPI input::placeholder,
-.light-mode .Header_form__FlOPI input,
-.light-mode .User_group__kK0zJ input,
-.light-mode .User_group__kK0zJ input::placeholder,
-.light-mode .User_group__SH01r input,
-.light-mode .User_group__SH01r input::placeholder {
+.light-mode .user-title,
+.light-mode .total,
+.light-mode .price,
+.light-mode .user-link:hover,
+.light-mode .category-filter input,
+.light-mode .header-form input::placeholder,
+.light-mode .header-form input,
+.light-mode .user-group input,
+.light-mode .user-group input::placeholder {
   color: var(--dark);
 }
 
-.light-mode .Header_icon-fav__xfuaF,
-.light-mode .Header_icon-fav__m-oAt,
-.light-mode .Header_icon-cart__L4jum,
-.light-mode .Header_icon-cart__TR11b,
-.light-mode .User_close__cXNYs .icon,
-.light-mode .Cart_close__qwcXm .icon {
+.light-mode .header-icon-fav,
+.light-mode .header-icon-cart,
+.light-mode .close .icon {
   stroke: var(--dark-sea);
 }
 
-.light-mode .Header_icon-fav__xfuaF:hover,
-.light-mode .User_close__BYyn5 .icon:hover,
-.light-mode .User_close__cXNYs .icon:hover,
-.light-mode .Header_icon-cart__L4jum:hover {
+.light-mode .header-icon-fav:hover,
+.light-mode .user-close .icon:hover,
+.light-mode .header-icon-cart:hover {
   stroke: var(--dark);
 }
 
-.light-mode .Header_form__FlOPI,
-.light-mode .Header_form__XcBW3,
+.light-mode .header-form,
 .light-mode .container section,
-.light-mode .Footer_footer__6qIm6,
+.light-mode .footer,
 .light-mode .product-carts,
-.light-mode .User_group__kK0zJ input,
-.light-mode .User_group__SH01r input {
+.light-mode .user-group input {
   background: var(--grey) !important;
 }

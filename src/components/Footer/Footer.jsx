@@ -1,27 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import styles from "../../styles/Footer.module.css";
+import "../../styles/Footer.css";
 import { ROUTES } from "../../utils/routes";
 
 import LOGO from "../../images/logo.svg";
 
 const Footer = () => (
-  <section className={styles.footer}>
-    <div className={styles.logo}>
+  <section className="footer">
+    <div className="logo">
       <Link to={ROUTES.HOME}>
         <img src={LOGO} alt="Stuff" />
       </Link>
     </div>
 
-    <div className={styles.rights}>
+    <div className="rights">
       Developed by{" "}
       <a href="https://t.me/abula4ever" target="_blank" rel="noreferrer">
         Abula
       </a>
     </div>
 
-    <div className={styles.socials}>
+    <div className="socials">
       <a
         href="https://instagram.com/the_abdulazyz?igshid=YmMyMTA2M2Y="
         target="_blank"

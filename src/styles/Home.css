@@ -3,7 +3,7 @@
   flex-grow: 1;
 }
 
-.title {
+.poster-title {
   font-weight: 900;
   font-size: 119px;
   line-height: 145px;
@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.product {
+.poster-product {
   position: relative;
   padding-left: 42px;
   display: flex;
@@ -20,13 +20,13 @@
   margin-top: 9px;
 }
 
-.subtitle {
+.poster-subtitle {
   line-height: 20px;
   text-transform: uppercase;
   color: var(--sea);
 }
 
-.head {
+.poster-head {
   font-weight: 700;
   font-size: 42px;
   line-height: 51px;
@@ -36,13 +36,13 @@
   margin: 10px 0 24px 0;
 }
 
-.image {
+.poster-image {
   position: relative;
   flex-grow: 1;
   height: 250px;
 }
 
-.image img {
+.poster-image img {
   position: absolute;
   bottom: -15%;
   right: 10%;

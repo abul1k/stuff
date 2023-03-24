@@ -1,24 +1,21 @@
 import React from "react";
 
-import styles from "../../styles/Home.module.css";
+import "../../styles/Home.css";
 
 import bannerImg from "../../images/banner.png";
 
 const Banner = () => (
-  <section className={styles.banner}>
-    <div className={styles.left}>
-      <p className={styles.content}>
+  <section className={"banner"}>
+    <div className={"left"}>
+      <p className={"content"}>
         NEW YEAR
         <span>SALE</span>
       </p>
-      <button className={styles.more}>See more</button>
+      <button className={"more"}>See more</button>
     </div>
 
-    <div
-      className={styles.right}
-      style={{ backgroundImage: `url(${bannerImg})` }}
-    >
-      <p className={styles.discount}>
+    <div className={"right"} style={{ backgroundImage: `url(${bannerImg})` }}>
+      <p className={"discount"}>
         save up to <span>50%</span> off
       </p>
     </div>

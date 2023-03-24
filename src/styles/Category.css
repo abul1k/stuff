@@ -1,17 +1,17 @@
-.wrapper {
+.category-wrapper {
   width: 100%;
   padding: 24px;
   flex-grow: 1;
 }
 
-.filters {
+.category-filters {
   display: flex;
   gap: 20px;
   width: 100%;
   margin-top: 24px;
 }
 
-.filter {
+.category-filter {
   background: var(--bg-dark-mode);
   border-radius: 8px;
   padding: 12px 24px;
@@ -21,17 +21,17 @@
   min-width: 225px;
 }
 
-.full {
+.category-full {
   width: 100%;
 }
 
-.filter input {
+.category-filter input {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
 }
 
-.filter span {
+.category-filter span {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
@@ -39,12 +39,12 @@
   text-align: right;
 }
 
-.more {
+.category-more {
   margin: 32px auto 0 auto;
   text-align: center;
 }
 
-.back {
+.category-back {
   display: flex;
   align-items: center;
   gap: 20px;

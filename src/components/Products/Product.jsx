@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { ROUTES } from "../../utils/routes";
 
-import styles from "../../styles/Product.module.css";
+import "../../styles/Product.css";
 
 import {
   addItemToCart,
@@ -46,38 +46,38 @@ const Product = (item) => {
   };
 
   return (
-    <section className={styles.product}>
-      <div className={styles.images}>
+    <section className={"product"}>
+      <div className={"product-images"}>
         <div
-          className={styles.current}
+          className={"product-current"}
           style={{ backgroundImage: `url(${currentImage})` }}
         />
-        <div className={styles["images-list"]}>
+        <div className={"product-images-list"}>
           {images.map((image, i) => (
             <div
               key={i}
-              className={styles.image}
+              className={"product-image"}
               style={{ backgroundImage: `url(${image})` }}
               onClick={() => setCurrentImage(image)}
             />
           ))}
         </div>
       </div>
-      <div className={styles.info}>
-        <h1 className={styles.title}>{title}</h1>
-        <div className={styles.price}>{price}$</div>
-        <div className={styles.color}>
+      <div className={"product-info"}>
+        <h1 className={"product-title"}>{title}</h1>
+        <div className={"product-price"}>{price}$</div>
+        <div className={"product-color"}>
           <span>Color:</span> Green
         </div>
-        <div className={styles.sizes}>
+        <div className={"product-sizes"}>
           <span>Sizes:</span>
 
-          <div className={styles.list}>
+          <div className={"product-list"}>
             {SIZES.map((size) => (
               <div
                 onClick={() => setCurrentSize(size)}
-                className={`${styles.size} ${
-                  currentSize === size ? styles.active : ""
+                className={`${"size"} ${
+                  currentSize === size ? "active" : ""
                 }`}
                 key={size}
               >
@@ -87,29 +87,29 @@ const Product = (item) => {
           </div>
         </div>
 
-        <p className={styles.description}>{description}</p>
+        <p className={"product-description"}>{description}</p>
 
-        <div className={styles.actions}>
+        <div className={"product-actions"}>
           <button
             onClick={addToCart}
-            className={styles.add}
+            className={"product-add"}
             disabled={!currentSize}
           >
             Add to cart
           </button>
           {item.id === favItemId ? (
-            <button onClick={deleteFromFavourite} className={styles.favourite}>
+            <button onClick={deleteFromFavourite} className={"product-favourite"}>
               Delete from favourites
             </button>
           ) : (
-            <button onClick={addToFavourite} className={styles.favourite}>
+            <button onClick={addToFavourite} className={"product-favourite"}>
               Add to favourites
             </button>
           )}
         </div>
 
-        <div className={styles.bottom}>
-          <div className={styles.purchase}>19 people purchased</div>
+        <div className={"product-bottom"}>
+          <div className={"product-purchase"}>19 people purchased</div>
 
           <Link to={ROUTES.HOME}>Return to store</Link>
         </div>

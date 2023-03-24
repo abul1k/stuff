@@ -2,38 +2,39 @@
   width: 304px;
   padding: 24px;
   height: 423px;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
 }
 
-.title {
+.sidebar-title {
   font-weight: 600;
   line-height: 20px;
 }
 
-.menu {
+.sidebar-menu {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
   row-gap: 12px;
 }
 
-.link {
+.sidebar-link {
   color: var(--dark-sea);
   font-size: 14px;
   line-height: 17px;
   text-transform: capitalize;
 }
 
-.link:hover {
+.sidebar-link:hover {
   color: var(--white);
 }
 
-.link.active {
+.sidebar-link.sidebar-active {
   color: var(--violet);
 }
 
-.footer {
+.sidebar-footer {
   margin-top: auto;
   display: flex;
   justify-content: space-between;

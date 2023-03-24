@@ -3,13 +3,13 @@
   padding: 24px;
 }
 
-.form {
+.profile-form {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
 
-.group {
+.profile-group {
   width: 100%;
   background: #212123;
   border-radius: 8px;
@@ -17,11 +17,11 @@
   padding: 12px 24px;
 }
 
-.group input {
+.profile-group input {
   width: 100%;
 }
 
-.actions {
+.profile-actions {
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -29,11 +29,11 @@
   column-gap: 20px;
 }
 
-.logout {
+.profile-logout {
   background: var(--dark-danger);
 }
 
-.logout:hover {
+.profile-logout:hover {
   background: var(--danger);
 
 }

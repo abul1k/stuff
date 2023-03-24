@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import "../../utils/i18n";
 
-import styles from "../../styles/Header.module.css";
+import "../../styles/Header.css";
 
 import { ROUTES } from "../../utils/routes";
 
@@ -54,25 +54,25 @@ const Header = () => {
   const lang = localStorage.getItem("i18nextLng");
 
   return (
-    <div className={styles.header}>
-      <div className={styles.logo}>
+    <div className={"header"}>
+      <div className={"header-logo"}>
         <Link to={ROUTES.HOME}>
           {/* <img src={LOGO} alt="Stuff" /> */}
           <div className="flex flex-align">
             <img
-              className={styles.logotype}
+              className={"header-logotype"}
               src={`${process.env.PUBLIC_URL}/logo192.png`}
               alt="Stuff"
             />
-            <h1 className={styles.name}>TUFF</h1>
+            <h1 className={"header-name"}>TUFF</h1>
           </div>
         </Link>
       </div>
 
-      <div className={styles.info}>
-        <div className={styles.actions}>
+      <div className={"header-info"}>
+        <div className={"header-actions"}>
           <select
-            className={styles.langchoise}
+            className={"header-langchoise"}
             value={lang || "ru"}
             onInput={selectedLang}
           >
@@ -81,27 +81,27 @@ const Header = () => {
           </select>
           {theme === "light" ? (
             <img
-              className={styles.theme}
+              className={"header-theme"}
               src={MOON}
               alt="dark"
               onClick={() => dispatch(toggleTheme("dark"))}
             />
           ) : (
             <img
-              className={styles.theme}
+              className={"header-theme"}
               src={SUN}
               alt="light"
               onClick={() => dispatch(toggleTheme("light"))}
             />
           )}
         </div>
-        <form className={styles.form}>
-          <div className={styles.icon}>
+        <form className={"header-form"}>
+          <div className={"header-icon"}>
             <svg className="icon">
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#search`} />
             </svg>
           </div>
-          <div className={styles.input}>
+          <div className={"header-input"}>
             <input
               type="search"
               name="search"
@@ -113,7 +113,7 @@ const Header = () => {
           </div>
 
           {searchValue && (
-            <div className={styles.box}>
+            <div className={"header-box"}>
               {isLoading
                 ? "Loading"
                 : !data.length
@@ -123,14 +123,14 @@ const Header = () => {
                       <Link
                         key={id}
                         onClick={() => setSearchValue("")}
-                        className={styles.item}
+                        className={"header-item"}
                         to={`/products/${id}`}
                       >
                         <div
-                          className={styles.image}
+                          className={"header-image"}
                           style={{ backgroundImage: `url(${images[0]})` }}
                         />
-                        <div className={styles.title}>{title}</div>
+                        <div className={"header-title"}>{title}</div>
                       </Link>
                     );
                   })}
@@ -138,38 +138,34 @@ const Header = () => {
           )}
         </form>
 
-        <div className={styles.account}>
-          <Link to={ROUTES.FAVOURITE} className={styles.favourites}>
-            <svg className={styles["icon-fav"]}>
+        <div className={"header-account"}>
+          <Link to={ROUTES.FAVOURITE} className={"header-favourites"}>
+            <svg className={"header-icon-fav"}>
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#heart`} />
             </svg>
             {!!favourite.length && (
-              <span className={styles.count}>{favourite.length}</span>
+              <span className={"header-count"}>{favourite.length}</span>
             )}
           </Link>
 
-          <Link to={ROUTES.CART} className={styles.cart}>
-            <svg className={styles["icon-cart"]}>
+          <Link to={ROUTES.CART} className={"header-cart"}>
+            <svg className={"header-icon-cart"}>
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#bag`} />
             </svg>
-            {!!cart.length && (
-              <span className={styles.count}>{cart.length}</span>
-            )}
+            {!!cart.length && <span className={"header-count"}>{cart.length}</span>}
           </Link>
 
-          <div className={styles.user} onClick={handleClick}>
+          <div className={"header-user"} onClick={handleClick}>
             {values.email ? (
               <div>
                 <div
-                  className={styles.avatar}
+                  className={"header-avatar"}
                   style={{ backgroundImage: `url(${AVATAR})` }}
                 />
-                <span className={styles.username}>
-                  {values.email.split("@")[0]}
-                </span>
+                <span className={"header-username"}>{values.email.split("@")[0]}</span>
               </div>
             ) : (
-              <button className={styles.signInBtn}>{t("header.signIn")}</button>
+              <button className={"header-signInBtn"}>{t("header.signIn")}</button>
             )}
           </div>
         </div>

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import UserSignupForm from "./UserSignupForm";
 import UserLoginForm from "./UserLoginForm";
 
-import styles from "../../styles/User.module.css";
+import "../../styles/User.css";
 import { toggleForm, toggleFormType } from "../../features/user/userSlice";
 
 const UserForm = () => {
@@ -16,7 +16,7 @@ const UserForm = () => {
 
   return showForm ? (
     <>
-      <div className={styles.overlay} onClick={closeForm} />
+      <div className={"overlay"} onClick={closeForm} />
       {formType === "signup" ? (
         <UserSignupForm
           toggleCurrentFormType={toggleCurrentFormType}

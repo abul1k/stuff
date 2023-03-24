@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { createUser } from "../../features/user/userSlice";
 
-import styles from "../../styles/User.module.css";
+import  "../../styles/User.css";
 
 const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
   const dispatch = useDispatch();
@@ -41,20 +41,20 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.close} onClick={closeForm}>
+    <div className={"user-wrapper"}>
+      <div className={"user-close"} onClick={closeForm}>
         <svg className="icon">
           <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#close`} />
         </svg>
       </div>
 
-      <div className={styles.title}>Sign Up</div>
+      <div className={"user-title"}>Sign Up</div>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.group}>
+      <form className={"user-form"} onSubmit={handleSubmit}>
+        <div className={"user-group"}>
           <input
             className={
-              values.email || !entered.email ? styles.input : styles.required
+              values.email || !entered.email ? "user-input" : "user-required"
             }
             type="email"
             placeholder="Your email"
@@ -67,12 +67,12 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
           />
         </div>
 
-        <div className={styles.group}>
+        <div className={"user-group"}>
           <input
             className={
               values.password || !entered.password
-                ? styles.input
-                : styles.required
+                ? "user-input"
+                : "user-required"
             }
             type="password"
             placeholder="Your password"
@@ -85,7 +85,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
           />
 
           {entered.password && (
-            <span className={styles.requiredText}>
+            <span className={"user-requiredText"}>
               {values.password.length < 6 &&
                 `Password must be at least 6 characters. (${values.password.length})`}
             </span>
@@ -93,13 +93,13 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
         </div>
 
         <div
-          className={styles.link}
+          className={"user-link"}
           onClick={() => toggleCurrentFormType("login")}
         >
           I already have an account
         </div>
 
-        <button type="submit" className={styles.submit}>
+        <button type="submit" className={"user-submit"}>
           Create an account
         </button>
       </form>

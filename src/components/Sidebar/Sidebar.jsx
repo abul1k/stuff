@@ -2,21 +2,21 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import styles from "../../styles/Sidebar.module.css";
+import "../../styles/Sidebar.css";
 
 const Sidebar = () => {
   const { list } = useSelector(({ categories }) => categories);
 
   return (
-    <section className={styles.sidebar}>
-      <h2 className={styles.title}>CATEGORIES</h2>
+    <section className={"sidebar"}>
+      <h2 className={"sidebar-title"}>CATEGORIES</h2>
       <nav>
-        <ul className={styles.menu}>
+        <ul className={"sidebar-menu"}>
           {list.map(({ id, name }) => (
             <li key={id}>
               <NavLink
                 className={({ isActive }) =>
-                  `${styles.link} ${isActive ? styles.active : ""}`
+                  `${"sidebar-link"} ${isActive ? "sidebar-active" : ""}`
                 }
                 to={`/categories/${id}`}
               >
@@ -27,14 +27,14 @@ const Sidebar = () => {
         </ul>
       </nav>
 
-      <div className={styles.footer}>
-        <a href="/help" target="_blank" className={styles.link}>
+      <div className={"sidebar-footer"}>
+        <a href="/help" target="_blank" className={"sidebar-link"}>
           Help
         </a>
         <a
           href="/terms"
           target="_blank"
-          className={styles.link}
+          className={"sidebar-link"}
           style={{ textDecoration: "underline" }}
         >
           Terms & Conditions

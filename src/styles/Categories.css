@@ -3,19 +3,19 @@
   padding: 22px;
 }
 
-.list {
+.categories-list {
   margin-top: 24px;
   display: flex;
   column-gap: 20px;
 }
 
-.item {
+.categories-item {
   width: calc(100% / 5);
   overflow: hidden;
   text-align: center;
 }
 
-.image {
+.categories-image {
   width: 100%;
   height: 230px;
   background-position: center;
@@ -23,7 +23,7 @@
   background-size: cover;
 }
 
-.title {
+.categories-title {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;

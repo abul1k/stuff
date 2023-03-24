@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { updateUser, logOut } from "../../features/user/userSlice";
 
-import styles from "../../styles/Profile.module.css";
+import  "../../styles/Profile.css";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -46,12 +46,12 @@ const Profile = () => {
   };
 
   return (
-    <section className={styles.profile}>
+    <section className={"profile"}>
       {!currentUser ? (
         <span>You need to log in</span>
       ) : (
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.group}>
+        <form className={"profile-form"} onSubmit={handleSubmit}>
+          <div className={"profile-group"}>
             <input
               type="email"
               placeholder="Your email"
@@ -63,7 +63,7 @@ const Profile = () => {
             />
           </div>
 
-          <div className={styles.group}>
+          <div className={"profile-group"}>
             <input
               type="name"
               placeholder="Your name"
@@ -75,7 +75,7 @@ const Profile = () => {
             />
           </div>
 
-          <div className={styles.group}>
+          <div className={"profile-group"}>
             <input
               type="password"
               placeholder="Your password"
@@ -87,7 +87,7 @@ const Profile = () => {
             />
           </div>
 
-          <div className={styles.group}>
+          <div className={"profile-group"}>
             <input
               type="avatar"
               placeholder="Your avatar"
@@ -99,11 +99,11 @@ const Profile = () => {
             />
           </div>
 
-          <div className={styles.actions}>
-            <button type="submit" className={styles.update}>
+          <div className={"profile-actions"}>
+            <button type="submit" className={"profile-update"}>
               Update
             </button>
-            <button onClick={handleLogOut} className={styles.logout}>
+            <button onClick={handleLogOut} className={"profile-logout"}>
               Log out
             </button>
           </div>

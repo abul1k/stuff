@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import { useGetProductsQuery } from "../../features/api/apiSlice";
 
-import styles from "../../styles/Category.module.css";
+import "../../styles/Category.css";
 
 import Products from "../Products/Products";
 
@@ -78,11 +78,11 @@ const Category = () => {
   };
 
   return (
-    <section className={styles.wrapper}>
-      <h2 className={styles.title}>{cat?.name}</h2>
+    <section className={"category-wrapper"}>
+      <h2 className={"category-title"}>{cat?.name}</h2>
 
-      <form className={styles.filters} onSubmit={handleSubmit}>
-        <div className={styles.filter}>
+      <form className={"category-filters"} onSubmit={handleSubmit}>
+        <div className={"category-filter"}>
           <input
             type="text"
             name="title"
@@ -91,7 +91,7 @@ const Category = () => {
             value={values.title}
           />
         </div>
-        <div className={styles.filter}>
+        <div className={"category-filter"}>
           <input
             type="number"
             name="price_min"
@@ -101,7 +101,7 @@ const Category = () => {
           />
           <span>Price from</span>
         </div>
-        <div className={styles.filter}>
+        <div className={"category-filter"}>
           <input
             type="number"
             name="price_max"
@@ -118,7 +118,7 @@ const Category = () => {
       {isLoading ? (
         <div className="preloader">Loading...</div>
       ) : !isSuccess || !items.length ? (
-        <div className={styles.back}>
+        <div className={"category-back"}>
           <span>No results</span>
           <button onClick={handleReset}>Reset</button>
         </div>
@@ -132,7 +132,7 @@ const Category = () => {
       )}
 
       {!isEnd && (
-        <div className={styles.more}>
+        <div className={"category-more"}>
           <button
             onClick={() =>
               setParams({ ...params, offset: params.offset + params.limit })
