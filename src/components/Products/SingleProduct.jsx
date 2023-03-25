@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import ProductSkeleton from "../../Additionals/ProductSkeleton";
@@ -12,6 +13,8 @@ import Product from "./Product";
 import Products from "./Products";
 
 const SingleProduct = () => {
+  const { t } = useTranslation();
+
   const [playSkeleton, setPlaySkeleton] = useState(true);
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -52,7 +55,7 @@ const SingleProduct = () => {
   ) : (
     <>
       <Product {...data} />
-      <Products products={related} amount={5} title="Related products" />
+      <Products products={related} amount={5} title={t('products.relatedProducts')} />
     </>
   );
 };

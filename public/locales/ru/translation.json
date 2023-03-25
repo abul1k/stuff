@@ -1,5 +1,55 @@
 {
   "header": {
-    "signIn": "Войти"
+    "signIn": "Войти",
+    "searchInput": "Искать что угодно...",
+    "loading": "Загрузка",
+    "noResults": "Нет результатов"
+  },
+  "sidebar": {
+    "categories": "КАТЕГОРИИ",
+    "help": "Служба поддержки",
+    "terms": "Условия"
+  },
+  "categories": {
+    "clothes": "Одежда",
+    "electronics": "Электроника",
+    "furniture": "Мебель",
+    "shoes": "Обувь",
+    "others": "Другие"
+  },
+  "products": {
+    "trending": "В тренде",
+    "worthSeeing": "Стоит посмотреть",
+    "less100": "Менее 100$",
+    "color": "Цвет",
+    "sizes": "Размеры",
+    "relatedProducts": "Похожие продукты"
+  },
+  "cart": {
+    "yourFavourites": "Ваши любимые продукты",
+    "yourCart": "Ваша корзина",
+    "totalPrice": "ИТОГОВАЯ ЦЕНА:",
+    "proceedToCheckout": "Перейти к оформлению заказа"
+  },
+  "userForm": {
+    "signUp": "Зарегистрироваться",
+    "logIn": "Авторизоваться",
+    "email": "Ваш Email",
+    "password": "Ваш пароль",
+    "iHaveAnAccount": "У меня уже есть аккаунт",
+    "createAnAccount": "Создать аккаунт",
+    "requiredLength": "Пароль должен быть не менее 6 символов."
+  },
+  "actions": {
+    "buyNow": "Купить сейчас",
+    "developedBy": "Разработан",
+    "purchased": "куплено",
+    "empty": "Здесь пусто",
+    "addToCart": "В корзину",
+    "addToFavourites": "В избранное",
+    "removeFromFavorites": "Удалить из Избранного",
+    "returnToStore": "Вернуться к покупкам",
+    "update": "Обновить",
+    "logOut": "Выйти"
   }
 }

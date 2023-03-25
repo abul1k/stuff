@@ -26,6 +26,7 @@
 .header-langchoise option {
   border: 0;
   background: 0;
+  color: var(--dark);
 }
 
 .header-name {

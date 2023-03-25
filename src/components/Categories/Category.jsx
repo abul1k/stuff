@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { useGetProductsQuery } from "../../features/api/apiSlice";
 
@@ -77,6 +78,8 @@ const Category = () => {
     setEnd(false);
   };
 
+  const { t } = useTranslation();
+
   return (
     <section className={"category-wrapper"}>
       <h2 className={"category-title"}>{cat?.name}</h2>
@@ -116,10 +119,10 @@ const Category = () => {
       </form>
 
       {isLoading ? (
-        <div className="preloader">Loading...</div>
+        <div className="preloader">{t("header.loading")}...</div>
       ) : !isSuccess || !items.length ? (
         <div className={"category-back"}>
-          <span>No results</span>
+          <span>{t("header.noResults")}</span>
           <button onClick={handleReset}>Reset</button>
         </div>
       ) : (

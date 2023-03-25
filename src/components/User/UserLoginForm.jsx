@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../features/user/userSlice";
 
 import "../../styles/User.css";
 
 const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
 
   const [values, setValues] = useState({
@@ -47,7 +50,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
         </svg>
       </div>
 
-      <div className={"user-title"}>Log In</div>
+      <div className={"user-title"}>{t("userForm.logIn")}</div>
 
       <form className={"user-form"} onSubmit={handleSubmit}>
         <div className={"user-group"}>
@@ -56,7 +59,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
               values.email || !entered.email ? "user-input" : "user-required"
             }
             type="email"
-            placeholder="Your email"
+            placeholder={t("userForm.email")}
             name="email"
             value={values.email}
             autoComplete="off"
@@ -74,7 +77,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
                 : "user-required"
             }
             type="password"
-            placeholder="Your password"
+            placeholder={t("userForm.email")}
             name="password"
             value={values.password}
             autoComplete="off"
@@ -86,7 +89,9 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
           {entered.password && (
             <span className={"user-requiredText"}>
               {values.password.length < 6 &&
-                `Password must be at least 6 characters. (${values.password.length})`}
+                t("userForm.requiredLength") +
+                  " " +
+                  `(${values.password.length})`}
             </span>
           )}
         </div>
@@ -95,11 +100,11 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
           onClick={() => toggleCurrentFormType("signup")}
           className={"user-link"}
         >
-          Create an account
+          {t('userForm.createAnAccount')}
         </div>
 
         <button type="submit" className={"user-submit"}>
-          Login
+        {t('userForm.logIn')}
         </button>
       </form>
     </div>

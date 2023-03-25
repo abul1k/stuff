@@ -9,8 +9,10 @@ import Poster from "../Poster/Poster";
 import Products from "../Products/Products";
 
 import ProductCartsSkeleton from "../../Additionals/ProductCartsSkeleton";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const {
     products: { list, filtered },
@@ -29,14 +31,22 @@ const Home = () => {
       {!list.length ? (
         <ProductCartsSkeleton />
       ) : (
-        <Products products={list} amount={5} title="Trending" />
+        <Products products={list} amount={5} title={t("products.trending")} />
       )}
-      <Categories products={categories.list} amount={5} title="Worth seeing" />
+      <Categories
+        products={categories.list}
+        amount={5}
+        title={t("products.worthSeeing")}
+      />
       <Banner />
       {!list.length ? (
         <ProductCartsSkeleton />
       ) : (
-        <Products products={filtered} amount={5} title="Less than 100$" />
+        <Products
+          products={filtered}
+          amount={5}
+          title={t("products.less100")}
+        />
       )}
     </>
   );

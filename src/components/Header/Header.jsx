@@ -20,8 +20,7 @@ import { useGetProductsQuery } from "../../features/api/apiSlice";
 import { toggleTheme } from "../../features/layout/layoutSlice";
 
 const Header = () => {
-  const { i18n } = useTranslation();
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -105,7 +104,7 @@ const Header = () => {
             <input
               type="search"
               name="search"
-              placeholder="Search for anyting..."
+              placeholder={t("header.searchInput")}
               autoComplete="off"
               onChange={handleSearch}
               value={searchValue}
@@ -115,9 +114,9 @@ const Header = () => {
           {searchValue && (
             <div className={"header-box"}>
               {isLoading
-                ? "Loading"
+                ? t("header.loading")
                 : !data.length
-                ? "No results"
+                ? t("header.noResults")
                 : data.map(({ title, images, id }) => {
                     return (
                       <Link
@@ -152,7 +151,9 @@ const Header = () => {
             <svg className={"header-icon-cart"}>
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#bag`} />
             </svg>
-            {!!cart.length && <span className={"header-count"}>{cart.length}</span>}
+            {!!cart.length && (
+              <span className={"header-count"}>{cart.length}</span>
+            )}
           </Link>
 
           <div className={"header-user"} onClick={handleClick}>
@@ -162,10 +163,14 @@ const Header = () => {
                   className={"header-avatar"}
                   style={{ backgroundImage: `url(${AVATAR})` }}
                 />
-                <span className={"header-username"}>{values.email.split("@")[0]}</span>
+                <span className={"header-username"}>
+                  {values.email.split("@")[0]}
+                </span>
               </div>
             ) : (
-              <button className={"header-signInBtn"}>{t("header.signIn")}</button>
+              <button className={"header-signInBtn"}>
+                {t("header.signIn")}
+              </button>
             )}
           </div>
         </div>

@@ -1,10 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import  "../../styles/Products.css";
 
 const Products = ({ title, style = {}, products = [], amount }) => {
   const list = products.filter((_, i) => i < amount);
+
+  const {t} = useTranslation()
 
   return (
     <section className={"cart-products"} style={style}>
@@ -28,7 +31,7 @@ const Products = ({ title, style = {}, products = [], amount }) => {
                 </div>
 
                 <div className={"product-cart-purchases"}>
-                  {Math.floor(Math.random() * 20 + 1)} purchased
+                  {Math.floor(Math.random() * 20 + 1)} {t('actions.purchased')}
                 </div>
               </div>
             </div>

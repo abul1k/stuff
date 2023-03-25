@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { useDispatch } from "react-redux";
 import { createUser } from "../../features/user/userSlice";
 
-import  "../../styles/User.css";
+import "../../styles/User.css";
 
 const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
   const dispatch = useDispatch();
+
+  const { t } = useTranslation();
 
   const [values, setValues] = useState({
     email: "",
@@ -48,7 +51,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
         </svg>
       </div>
 
-      <div className={"user-title"}>Sign Up</div>
+      <div className={"user-title"}>{t("userForm.signUp")}</div>
 
       <form className={"user-form"} onSubmit={handleSubmit}>
         <div className={"user-group"}>
@@ -57,7 +60,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
               values.email || !entered.email ? "user-input" : "user-required"
             }
             type="email"
-            placeholder="Your email"
+            placeholder={t("userForm.email")}
             name="email"
             value={values.email}
             autoComplete="off"
@@ -75,7 +78,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
                 : "user-required"
             }
             type="password"
-            placeholder="Your password"
+            placeholder={t("userForm.password")}
             name="password"
             value={values.password}
             autoComplete="off"
@@ -87,7 +90,9 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
           {entered.password && (
             <span className={"user-requiredText"}>
               {values.password.length < 6 &&
-                `Password must be at least 6 characters. (${values.password.length})`}
+                t("userForm.requiredLength") +
+                  " " +
+                  `(${values.password.length})`}
             </span>
           )}
         </div>
@@ -96,11 +101,11 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
           className={"user-link"}
           onClick={() => toggleCurrentFormType("login")}
         >
-          I already have an account
+          {t("userForm.iHaveAnAccount")}
         </div>
 
         <button type="submit" className={"user-submit"}>
-          Create an account
+          {t("userForm.createAnAccount")}
         </button>
       </form>
     </div>

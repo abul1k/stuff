@@ -37,7 +37,7 @@ export const loginUser = createAsyncThunk(
         payload.email,
         payload.password
       );
-      toast.success("You have successfully registered");
+      toast.success("You have successfully logged in");
 
       localStorage.setItem("user", JSON.stringify(UserImpl.user));
       return UserImpl.user;

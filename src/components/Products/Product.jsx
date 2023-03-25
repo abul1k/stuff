@@ -11,10 +11,12 @@ import {
   addItemToFavourite,
   removeItemFromFavourite,
 } from "../../features/user/userSlice";
+import { useTranslation } from "react-i18next";
 
 const SIZES = [4, 4.5, 5];
 
 const Product = (item) => {
+  const { t } = useTranslation();
   const { title, price, images, description } = item;
 
   const favouriteItem = useSelector((state) => state.user.favourite);
@@ -67,18 +69,16 @@ const Product = (item) => {
         <h1 className={"product-title"}>{title}</h1>
         <div className={"product-price"}>{price}$</div>
         <div className={"product-color"}>
-          <span>Color:</span> Green
+          <span>{t('products.color')}:</span> Green
         </div>
         <div className={"product-sizes"}>
-          <span>Sizes:</span>
+          <span>{t('products.sizes')}:</span>
 
           <div className={"product-list"}>
             {SIZES.map((size) => (
               <div
                 onClick={() => setCurrentSize(size)}
-                className={`${"size"} ${
-                  currentSize === size ? "active" : ""
-                }`}
+                className={`${"size"} ${currentSize === size ? "active" : ""}`}
                 key={size}
               >
                 {size}
@@ -95,23 +95,26 @@ const Product = (item) => {
             className={"product-add"}
             disabled={!currentSize}
           >
-            Add to cart
+            {t("actions.addToCart")}
           </button>
           {item.id === favItemId ? (
-            <button onClick={deleteFromFavourite} className={"product-favourite"}>
-              Delete from favourites
+            <button
+              onClick={deleteFromFavourite}
+              className={"product-favourite"}
+            >
+              {t("actions.removeFromFavorites")}
             </button>
           ) : (
             <button onClick={addToFavourite} className={"product-favourite"}>
-              Add to favourites
+              {t("actions.addToFavourites")}
             </button>
           )}
         </div>
 
         <div className={"product-bottom"}>
-          <div className={"product-purchase"}>19 people purchased</div>
+          <div className={"product-purchase"}>19 {t('actions.purchased')}</div>
 
-          <Link to={ROUTES.HOME}>Return to store</Link>
+          <Link to={ROUTES.HOME}>{t('actions.returnToStore')}</Link>
         </div>
       </div>
     </section>

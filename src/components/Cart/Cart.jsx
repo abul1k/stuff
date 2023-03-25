@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addItemToCart,
@@ -6,9 +7,11 @@ import {
 } from "../../features/user/userSlice";
 
 import "../../styles/Cart.css";
+
 import { sumBy } from "../../utils/common";
 
 const Cart = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const { cart } = useSelector(({ user }) => user);
 
@@ -22,10 +25,10 @@ const Cart = () => {
 
   return (
     <section className={"cart"}>
-      <h2>Your cart</h2>
+      <h2>{t("cart.yourCart")}</h2>
 
       {!cart.length ? (
-        <div className={"empty"}>Here is empty</div>
+        <div className={"empty"}>{t("actions.empty")}</div>
       ) : (
         <>
           <div className={"list"}>
@@ -91,13 +94,13 @@ const Cart = () => {
 
           <div className={"actions"}>
             <div className={"total"}>
-              TOTAL PRICE:{" "}
+              {t("cart.totalPrice") + " "}
               <span>
                 {sumBy(cart.map(({ quantity, price }) => quantity * price))}$
               </span>
             </div>
 
-            <button className={"proceed"}>Proceed to checkout</button>
+            <button className={"proceed"}>{t("cart.proceedToCheckout")}</button>
           </div>
         </>
       )}

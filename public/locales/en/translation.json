@@ -1,5 +1,57 @@
 {
   "header": {
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "searchInput": "Search for anyting...",
+    "loading": "Loading",
+    "noResults": "No results"
+  },
+  "sidebar": {
+    "categories": "CATEGORIES",
+    "help": "Help",
+    "terms": "Terms & Conditions"
+  },
+  "categories": {
+    "clothes": "Clothes",
+    "electronics": "Electronics",
+    "furniture": "Furniture",
+    "shoes": "Shoes",
+    "others": "Others"
+  },
+  "products": {
+    "trending": "Trending",
+    "worthSeeing": "Worth seeing",
+    "less100": "Less than 100$",
+    "color": "Color",
+    "sizes": "Sizes",
+    "relatedProducts": "Related products"
+  },
+  "cart": {
+    "yourFavourites": "Your favourite products",
+    "yourCart": "Your cart",
+    "totalPrice": "TOTAL PRICE:",
+    "proceedToCheckout": "Proceed to checkout"
+  },
+  "userForm": {
+    "signUp": "Sign Up",
+    "logIn": "Log In",
+    "email": "Your email",
+    "password": "Your password",
+    "iHaveAnAccount": "I already have an account",
+    "createAnAccount": "Create an account",
+    "requiredLength": "Password must be at least 6 characters.",
+    "successfulyReg": "You have successfully registered",
+    "successfulyLogIn": "You have successfully logged in"
+  },
+  "actions": {
+    "buyNow": "Shop Now",
+    "developedBy": "Developed by",
+    "purchased": "purchased",
+    "empty": "Here is empty",
+    "addToCart": "Add to cart",
+    "addToFavourites": "Add to favourites",
+    "removeFromFavorites": "Remove from favorites",
+    "returnToStore": "Return to store",
+    "update": "Update",
+    "logOut": "Log out"
   }
 }

@@ -7,6 +7,16 @@
   flex-direction: column;
 }
 
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 30px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--violet);
+  border-radius: 30px;
+}
+
 .sidebar-title {
   font-weight: 600;
   line-height: 20px;

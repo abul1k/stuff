@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { updateUser, logOut } from "../../features/user/userSlice";
 
-import  "../../styles/Profile.css";
+import "../../styles/Profile.css";
 
 const Profile = () => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -14,9 +17,9 @@ const Profile = () => {
 
   const [values, setValues] = useState({
     name: "",
-    email: "",
+    // email: "",
     password: "",
-    avatar: "",
+    // avatar: "",
   });
 
   useEffect(() => {
@@ -54,7 +57,7 @@ const Profile = () => {
           <div className={"profile-group"}>
             <input
               type="email"
-              placeholder="Your email"
+              placeholder={t('userForm.email')}
               name="email"
               value={values.email}
               autoComplete="off"
@@ -63,7 +66,7 @@ const Profile = () => {
             />
           </div>
 
-          <div className={"profile-group"}>
+          {/* <div className={"profile-group"}>
             <input
               type="name"
               placeholder="Your name"
@@ -73,12 +76,12 @@ const Profile = () => {
               onChange={handleChange}
               required
             />
-          </div>
+          </div> */}
 
           <div className={"profile-group"}>
             <input
               type="password"
-              placeholder="Your password"
+              placeholder={t('userForm.password')}
               name="password"
               value={values.password}
               autoComplete="off"
@@ -87,7 +90,7 @@ const Profile = () => {
             />
           </div>
 
-          <div className={"profile-group"}>
+          {/* <div className={"profile-group"}>
             <input
               type="avatar"
               placeholder="Your avatar"
@@ -97,14 +100,14 @@ const Profile = () => {
               onChange={handleChange}
               required
             />
-          </div>
+          </div> */}
 
           <div className={"profile-actions"}>
             <button type="submit" className={"profile-update"}>
-              Update
+            {t('actions.update')}
             </button>
             <button onClick={handleLogOut} className={"profile-logout"}>
-              Log out
+            {t('actions.logOut')}
             </button>
           </div>
         </form>

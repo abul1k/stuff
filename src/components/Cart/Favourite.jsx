@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import {
   removeItemFromFavourite,
@@ -8,6 +9,8 @@ import {
 import "../../styles/Cart.css";
 
 const Cart = () => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const { favourite } = useSelector(({ user }) => user);
 
@@ -22,10 +25,10 @@ const Cart = () => {
 
   return (
     <section className={"cart"}>
-      <h2>Your favourite products</h2>
+      <h2>{t("cart.yourFavourites")}</h2>
 
       {!favourite.length ? (
-        <div className={"empty"}>Here is empty</div>
+        <div className={"empty"}>{t("actions.empty")}</div>
       ) : (
         <>
           <div className={"list"}>
@@ -46,7 +49,7 @@ const Cart = () => {
                   <div className={"price"}>{price}$</div>
 
                   <button className={"toCart"} onClick={() => addToCard(item)}>
-                    Add to card
+                    {t("actions.addToCart")}
                   </button>
 
                   <div className={"close"} onClick={() => removeItem(item.id)}>
