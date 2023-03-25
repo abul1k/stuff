@@ -44,6 +44,7 @@
   },
   "actions": {
     "buyNow": "Shop Now",
+    "seeMore": "See more",
     "developedBy": "Developed by",
     "purchased": "purchased",
     "empty": "Here is empty",

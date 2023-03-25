@@ -10,6 +10,8 @@ import "../../styles/Category.css";
 import Products from "../Products/Products";
 
 const Category = () => {
+  const { t } = useTranslation();
+
   const { id } = useParams();
   const { list } = useSelector(({ categories }) => categories);
 
@@ -78,8 +80,6 @@ const Category = () => {
     setEnd(false);
   };
 
-  const { t } = useTranslation();
-
   return (
     <section className={"category-wrapper"}>
       <h2 className={"category-title"}>{cat?.name}</h2>
@@ -141,7 +141,7 @@ const Category = () => {
               setParams({ ...params, offset: params.offset + params.limit })
             }
           >
-            See more
+            {t("actions.seeMore")}
           </button>
         </div>
       )}
