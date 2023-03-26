@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
+import { HiOutlineMenu } from "react-icons/hi";
+
 // i18n
 import { useTranslation } from "react-i18next";
 import "../../utils/i18n";
@@ -56,7 +58,6 @@ const Header = () => {
     <div className={"header"}>
       <div className={"header-logo"}>
         <Link to={ROUTES.HOME}>
-          {/* <img src={LOGO} alt="Stuff" /> */}
           <div className="flex flex-align">
             <img
               className={"header-logotype"}
@@ -155,6 +156,8 @@ const Header = () => {
               <span className={"header-count"}>{cart.length}</span>
             )}
           </Link>
+
+          <HiOutlineMenu className="hamburger" size="25" />
 
           <div className={"header-user"} onClick={handleClick}>
             {values.email ? (

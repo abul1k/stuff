@@ -13,6 +13,10 @@
   width: 28px;
 }
 
+.hamburger {
+  display: none;
+}
+
 .header-langchoise {
   user-select: none;
   outline: none;

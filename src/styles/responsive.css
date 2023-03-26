@@ -1,0 +1,52 @@
+@media screen and (max-width: 600px) {
+  .app {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .header {
+    background: var(--dark);
+    padding: 25px 20px !important;
+    margin-bottom: 20px;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+
+  .header-langchoise,
+  .header-theme,
+  .header-signInBtn {
+    display: none;
+  }
+
+  .header-form {
+    display: none !important;
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+
+  .home {
+    min-height: 800px;
+  }
+
+  .poster-title {
+    font-size: 50px !important;
+  }
+
+  .poster-image {
+    top: 300px;
+  }
+
+  .categories .categories-list {
+    width: 100%;
+    display: flex !important;
+
+  }
+
+  .categories .categories-list.categories-item {
+    width: 226px !important;
+  }
+}

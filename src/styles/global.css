@@ -84,6 +84,10 @@ li {
   justify-content: center;
 }
 
+.d-none {
+  display: none;
+}
+
 .flex-align {
   align-items: center;
 }
