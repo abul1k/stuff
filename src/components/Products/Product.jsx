@@ -69,10 +69,10 @@ const Product = (item) => {
         <h1 className={"product-title"}>{title}</h1>
         <div className={"product-price"}>{price}$</div>
         <div className={"product-color"}>
-          <span>{t('products.color')}:</span> Green
+          <span>{t("products.color")}:</span> Green
         </div>
         <div className={"product-sizes"}>
-          <span>{t('products.sizes')}:</span>
+          <span>{t("products.sizes")}:</span>
 
           <div className={"product-list"}>
             {SIZES.map((size) => (
@@ -105,16 +105,20 @@ const Product = (item) => {
               {t("actions.removeFromFavorites")}
             </button>
           ) : (
-            <button onClick={addToFavourite} className={"product-favourite"}>
+            <button
+              onClick={addToFavourite}
+              className={"product-favourite"}
+              disabled={!currentSize}
+            >
               {t("actions.addToFavourites")}
             </button>
           )}
         </div>
 
         <div className={"product-bottom"}>
-          <div className={"product-purchase"}>19 {t('actions.purchased')}</div>
+          <div className={"product-purchase"}>19 {t("actions.purchased")}</div>
 
-          <Link to={ROUTES.HOME}>{t('actions.returnToStore')}</Link>
+          <Link to={ROUTES.HOME}>{t("actions.returnToStore")}</Link>
         </div>
       </div>
     </section>

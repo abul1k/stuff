@@ -130,3 +130,8 @@
   cursor: not-allowed;
   background: var(--bg-dark-mode);
 }
+
+.product-favourite:disabled {
+  cursor: not-allowed;
+  background: var(--bg-dark-mode);
+}

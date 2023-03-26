@@ -77,7 +77,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
                 : "user-required"
             }
             type="password"
-            placeholder={t("userForm.email")}
+            placeholder={t("userForm.password")}
             name="password"
             value={values.password}
             autoComplete="off"
